@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7826136280228843461}
   - component: {fileID: 7826136280228843449}
   - component: {fileID: -8056784393677441778}
+  - component: {fileID: 10784150}
   m_Layer: 0
   m_Name: Robber
-  m_TagString: Untagged
+  m_TagString: robberController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +98,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e41b8cd98d42b4b8230f3a403fe2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerUI: {fileID: 0}
+  speed: 5
+  winText: {fileID: 0}
+  loseText: {fileID: 0}
+  Money: 0
+  moneyText: {fileID: 0}
+  backgroundMusic: {fileID: 0}
+  MoneyEffectPrefab: {fileID: 3951930471591481555, guid: 07672cb972dcf2e48a81c74883ef592d, type: 3}
+  MoneyClip: {fileID: 8300000, guid: 24f1c9ea8ca0ea24b98b524cdada35b3, type: 3}
+  winMusic: {fileID: 0}
+  loseMusic: {fileID: 0}
 --- !u!50 &7826136280228843449
 Rigidbody2D:
   serializedVersion: 4
@@ -112,8 +124,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: d7c39eb8c2b25b546b08628c320fce2f, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -131,6 +143,102 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18644297, y: 0.14407003}
-  m_Size: {x: 1.2500641, y: 1.5382035}
+  m_Offset: {x: 0.08029258, y: 0.21028101}
+  m_Size: {x: 0.55011964, y: 1.4057815}
   m_Direction: 0
+--- !u!82 &10784150
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7826136280228843448}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

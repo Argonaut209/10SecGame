@@ -1,31 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class Countdown : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 10f;
-    [SerializeField] Text countdownText;
+    int countDownStartValue = 12;
+    public Text timerUI;
 
-    private void Start()
+
+    void Start()
     {
-        currentTime = startingTime;
+        countDownTimer();
     }
 
-    private void Update()
+    void countDownTimer()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString ("0");
+        if (countDownStartValue > 0 )
+        {
 
-        if (currentTime <= 0)
-        {
-            currentTime = 0;
+            TimeSpan spanTime = TimeSpan.FromSeconds(countDownStartValue);
+            timerUI.text = "Timer : " + spanTime.Minutes + " : " + spanTime.Seconds;
+            countDownStartValue--;
+            Invoke("countDownTimer", 1.0f);
         }
-        else if (currentTime <= 3)
+        else
         {
-            countdownText.color = Color.red;
+
+            timerUI.text = "You Lose!";
+        
         }
     }
-
+    void Update() 
+    {
+        
+    }
 }
